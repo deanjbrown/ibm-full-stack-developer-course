@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Structural Elements</title>
+  </head>
+  <body>
+    <!-- Navigation menu using the nav tag -->
+    <nav>
+      <div class="menu">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+    <!-- Article tag to structure the content on this page -->
+    <article>
+      <!-- Header for the article -->
+      <header>
+        <h1>This is an Example Article</h1>
+        <p>A little subtext</p>
+      </header>
+      <!-- The article can be split into sections -->
+      <section id="section-1">
+        <h2>This is the first section of the article</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+      </section>
+      <section id="section-2">
+        <h2>This is the second section of the article</h2>
+        <p>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text ever
+          since the 1500s, when an unknown printer took a galley of type and
+          scrambled it to make a type specimen book. It has survived not only
+          five centuries, but also the leap into electronic typesetting,
+          remaining essentially unchanged. It was popularised in the 1960s with
+          the release of Letraset sheets containing Lorem Ipsum passages, and
+          more recently with desktop publishing software like Aldus PageMaker
+          including versions of Lorem Ipsum.
+        </p>
+        <aside>
+          <p>
+            This is an aside that is often use to display further content or
+            additional resources without detracting from the main discussion and
+            is often placed as a sidebar in a document.
+          </p>
+        </aside>
+        <!-- The <figure> tag defines self-contained content, such as a diagram or photo, that is referred to from the 
+          main content. The content within the <figure> element should be related to the main content, but still 
+            independent in such a way that if removed from the document, it would not affect the flow. -->
+        <figure>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/440px-IBM_logo.svg.png"
+            width="300"
+            height="300"
+            alt="IBM Developer Skills Network Logo"
+          />
+          <figcaption>IBM Developer Skills Network Logo</figcaption>
+        </figure>
+        <p>Here is some audio</p>
+        <audio controls>
+          <source
+            src="audio/Jazzy Piano (Royalty Free Music) - EARLY SUMMER by Tokyo Music Walker.mp3"
+            type="audio/mpeg"
+          />
+          Your browser does not support audio
+        </audio>
+      </section>
+      <section id="section-3">
+        <!-- The canvas element is used to draw graphics via scripting -->
+        <p>Here is a canvas element</p>
+        <canvas id="canvas-1"
+          >Your browser does not support the canvas tag</canvas
+        >
+      </section>
+
+      <section id="section-4">
+        <!-- The embed element is used as a container to embed external resources such as media players and plug-in applications to your webpage -->
+        <p>Here is an example of an embed</p>
+        <embed
+          src="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
+          width="500"
+          height="375"
+          type="application/pdf"
+        />
+      </section>
+
+      <section id="section-5">
+        <!-- The track element defines text tracks or captions for audio and video. The text should be visible as the related media source is playing.
+         These should be formatted in the WebVTT format (.vtt) -->
+        <p>Here is a video with captions</p>
+        <video controls>
+          <source src="video/BigBuckBunny_320x180.mp4" type="video/mp4" />
+          <track src="subtitles/BigBuckBunny.en.vtt" kind="subtitles" srclang="en" label="English" default/>
+          <track src="subtitles/BigBuckBunny.es.vtt" kind="subtitles" srclang="es" label="Spanish"/>
+        </video>
+      </section>
+    </article>
+
+    <!-- The footer can structure content at the bottom of the page -->
+    <footer>
+      <p>Copyright Dean Brown 2025</p>
+    </footer>
+
+    <!-- Scripts can be included at the top or the bottom of the page -->
+    <script>
+      var canvas = document.getElementById("canvas-1");
+      var context = canvas.getContext("2d");
+      context.fillRect(0, 0, 100, 100);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- The head element contains metadata about the page -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Common HTML Elements</title>
+  </head>
+  <!-- The body element contains data that is displayed to the user -->
+  <body>
+    <!-- This is just a structural element -->
+    <header>
+      <!-- There are 6 levels of possible headings -->
+      <h1>This is a h1 heading</h1>
+      <h2>This is a h2 heading</h2>
+      <h3>This is a h3 heading</h3>
+      <h4>This is a h4 heading</h4>
+      <h5>This is a h5 heading</h5>
+      <h6>This is a h6 heading</h6>
+      <hr />
+    </header>
+
+    <!-- Main is another structural element -->
+    <main>
+      <!-- As if section, but this one has an id -->
+      <section id="first-section">
+        <!-- Paragraphs-->
+        <p>This is a paragraph</p>
+        <p>
+          This is another paragraph but it has a break here<br />here<br />and
+          also here<br />
+        </p>
+
+        <!-- Links are non-blocking so wrapping them in paragraph makes them block-->
+        <p><a href="https://google.com">This is a link to Google</a></p>
+        <p>
+          <a href="https://google.com" target="_blank"
+            >This is another link to Google, but this will open a new tab</a
+          >
+        </p>
+        <hr />
+      </section>
+      <section id="second-section">
+        <p>This is another section with a table and some images</p>
+        <!-- A table -->
+        <table>
+          <tr>
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+            <th>Heading 4</th>
+          </tr>
+          <tr>
+            <td>Table data 1</td>
+            <td>Table data 2</td>
+            <td>Table data 3</td>
+            <td>Table data 4</td>
+          </tr>
+          <tr>
+            <td>Table data 1</td>
+            <td>Table data 2</td>
+            <td>Table data 3</td>
+            <td>Table data 4</td>
+          </tr>
+        </table>
+
+        <!-- External image -->
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/440px-IBM_logo.svg.png"
+          alt="IBM Logo"
+          width="300"
+          height="300"
+        />
+        <!-- Internal image -->
+        <img
+          src="img/IBM_logo.svg.png"
+          alt="IBM Logo"
+          width="300"
+          height="300"
+        />
+        <hr />
+      </section>
+    </main>
+
+    <!-- Another structural element indicating this is the footer of the site-->
+    <footer>
+      <!-- A list of links to different sections of the page -->
+      <ul>
+        <!-- Link back to the top of the page -->
+        <li><a href="#">This is a link back to the top of the page</a></li>
+        <!-- Link back to the first section -->
+        <li><a href="#first-section">Link back to the first section</a></li>
+      </ul>
+
+      <!-- We can also do an ordered list -->
+      <ol>
+        <li>This is the first element</li>
+        <li>This is the seond element</li>
+        <li>This is the third element</li>
+        <li>This is the fourth element</li>
+      </ol>
+    </footer>
+  </body>
+</html>

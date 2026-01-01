@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Browser Support Test</title>
+</head>
+<body>
+  <h1>Browser Support Test</h1>
+  <form id="test-form">
+  </form>
+  <script>
+    // Create an input element and set it's type attribute to date
+    const datePicker = document.createElement("input");
+    const formElement = document.getElementById("test-form");
+    datePicker.setAttribute("type", "date");
+    formElement.appendChild(datePicker);
+    // If the browser falls back to a text type, the browser does not support this element
+    if(datePicker.type == "text") {
+      alert("'date' input type is not supported by this browser");
+    }
+  </script>
+</body>
+</html>
