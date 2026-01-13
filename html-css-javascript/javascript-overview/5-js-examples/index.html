@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Examples</title>
+  </head>
+  <body>
+    <h1>JS Examples</h1>
+    <p>Check the browser console for the output</p>
+    <script>
+      /**
+       *
+       * Problem:
+       * You are working for an online store. Your task is to write a JavaScript code snippet that calculates the total sales amount
+       * for a given set of sales transactions.
+       *
+       */
+
+      console.log("[+] Example 1");
+
+      const sales = [
+        { item: "Laptop", quantity: 5, price: 800 },
+        { item: "Mobile Phone", quantity: 3, price: 600 },
+        { item: "Mouse", quantity: 8, price: 20 },
+      ];
+
+      function calculateTotalSales() {
+        let total = 0;
+        for (let i = 0; i < sales.length; i++) {
+          total += sales[i].quantity * sales[i].price;
+        }
+        return total;
+      }
+
+      console.log("[+] Total sales: ", calculateTotalSales());
+      console.log("\n\n");
+
+      /**
+       *
+       * Problem:
+       * Write a JavaScript program that generates a receipt for a customer's order. The receipt should include each item's name,
+       * quantity, price, and total cost.
+       *
+       */
+
+      console.log("[+] Example 2");
+
+      const sales_2 = [
+        { item: "Coffee", quantity: 3, price: 3.1 },
+        { item: "Croissant", quantity: 2, price: 2.2 },
+        { item: "Chocolate Cake", quantity: 3, price: 5.1 },
+      ];
+
+      function printReceipt() {
+        let grandTotal = 0;
+        console.log("[+] Receipt");
+        console.log("-----------------------------------------------------");
+        for (let i = 0; i < sales_2.length; i++) {
+          const itemTotal = sales_2[i].quantity * sales_2[i].price;
+          console.log(
+            sales_2[i].item +
+              " - Quantity: " +
+              sales_2[i].quantity +
+              " - Price: " +
+              sales_2[i].price.toFixed(2) +
+              " - Total: " +
+              itemTotal.toFixed(2)
+          );
+          grandTotal += itemTotal;
+        }
+        console.log("-----------------------------------------------------");
+        console.log("[+] Grand Total: " + grandTotal.toFixed(2));
+      }
+
+      printReceipt();
+      console.log("\n\n");
+
+      /**
+       *
+       * Problem:
+       * Write a JavaScript program to validate a list of passwords. A password is valid if:
+       *
+       * It contains only alphanumeric characters (letters and numbers)
+       * It must be at least 8 characters long, but no more than 20 characters
+       *
+       */
+      console.log("[+] Example 3");
+
+      const passwordList = [
+        "Password123",
+        "short",
+        "1234567",
+        "ABcde12345!",
+        "ThisIsMyPassword",
+        "Test!12345",
+      ];
+
+      function validatePasswords() {
+        const regex = /^[a-zA-Z0-9]{8,20}$/;
+        for (let i = 0; i < passwordList.length; i++) {
+          if (regex.test(passwordList[i])) {
+            console.log(`Password: ${passwordList[i]} is valid`);
+          } else {
+            console.log(`Password: ${passwordList[i]} is not valid`);
+          }
+        }
+      }
+
+      validatePasswords();
+      console.log("\n\n");
+
+      /**
+       *
+       * Problem:
+       * You are working for an online retail company. Your task is to write a JavaScript program that tracks the stock levels of
+       * various products in the inventory. The program should check if a product is in stock and log an appropriate message.
+       *
+       */
+      console.log("[+] Example 4");
+
+      const stockDetails = [
+        { productName: "IPhone 17", stockLevel: 4 },
+        { productName: "Samsung Galaxy S26", stockLevel: 0 },
+        { productName: "Toshiba Hard Drive", stockLevel: 2 },
+        { productName: "Sony Walkman", stockLevel: -2 },
+      ];
+
+      function checkStockLevels() {
+        for (let i = 0; i < stockDetails.length; i++) {
+          if (stockDetails[i].stockLevel > 0) {
+            console.log(
+              `[+] ${stockDetails[i].productName} is in stock - ${stockDetails[i].stockLevel} available`
+            );
+          } else {
+            console.log(`[-] ${stockDetails[i].productName} is not in stock`);
+          }
+        }
+      }
+
+      checkStockLevels();
+    </script>
+  </body>
+</html>
